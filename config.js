@@ -1,6 +1,6 @@
 global.DeveloperMode = 'false' //true Or false
-global.linkGC = ['https://chat.whatsapp.com/Lb4Emjih98rBiCZiZoS2eM']
-global.owner = ['6281390658325', '6282256115584', '6285713964963']// Put your number here
+global.linkGC = ['https://chat.whatsapp.com/DBXVcse2n5WLAa9I6Em0Ey']
+global.owner = ['60199782326']// Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -14,8 +14,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'I hope you\'re fine'
-global.author = 'Nurutomo'
+global.packname = 'Adiixyz'
+global.author = 'Bot'
 
 global.multiplier = 69 // The higher, The harder levelup
 
