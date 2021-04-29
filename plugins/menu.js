@@ -65,19 +65,30 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
           if (menu.help) groups[tag].push(menu)
     }
     conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || ` ╭─「 ${conn.getName(conn.user.jid)} 」
-│ Hai, %name!
-│
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Waktu: *%time*
-│
-│ Github:
-│ %github
-╰────`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│➥ %cmd%islimit'
-    let footer = conn.menu.footer || '╰────\n'
+    let before = conn.menu.before || ` 
+┏━━⊱  *Info Bot* 」⊰━━┓
+┣⊱ Bot Name : ${conn.user.name} 
+┣⊱ Prefix : Multi Prefix - 「 %p 」
+┣⊱ Uptime : %uptime
+┣⊱ Total User in Database : %totalreg
+┣⊱ Self? : undefined
+┣⊱ Public? : undefined
+┣⊱ Github : https://github.com/AdiiAndre/games-wabot
+┗━━━━━━━━━━━━━━━━
+┏━━⊱ *Info User* ⊰━━┓
+┣⊱ Name : %name
+┣⊱ Limit : *%limit Limit*
+┣⊱ Current XP : %exp
+┗━━━━━━━━━━━━━━━━
+┏━━⊱ *DATE AND TIME* ⊰━━┓
+┣⊱ Hari: *%week*
+┣⊱ Tanggal : *%date*
+┣⊱ Weton : *%weton*
+┣⊱ Waktu: *%time*
+┗━━━━━━━━━━━━━━━━ `
+    let header = conn.menu.header || '┏━━⊱ *%category* ⊰━━┓'
+    let body   = conn.menu.body   || '┣⊱ ✓ %cmd%islimit'
+    let footer = conn.menu.footer || '┗━━━━━━━━━━━━━━━━\n'
     let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
